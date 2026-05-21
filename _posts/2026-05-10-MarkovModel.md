@@ -5,8 +5,8 @@ title: Markov Sequence Model
 # tags: [NLP]
 layout: single
 date: 2026-05-10 18:02:14 -0400
-categories: jekyll update
-tags: RL
+# categories: jekyll update
+tags: NLP
 show_date: true
 show_tags: true
 permalink: /_posts/markovmodel/
