@@ -9,6 +9,7 @@ categories: jekyll update
 tags: RL
 show_date: true
 show_tags: true
+permalink: /_posts/markovmodel/
 ---
 
 A sequence model is a machine learning model that captures patterns in sequential or chronological data and uses them to make predictions.

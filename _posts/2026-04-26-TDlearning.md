@@ -8,11 +8,12 @@ layout: single
 date: 2026-04-26 18:02:14 -0400
 # categories: jekyll update
 tags: RL
+permalink: /_posts/tdlearning/
 show_date: true
 show_tags: true
 ---
 
-In [Monte Carlo]({{ "/blog/montecarlo/" | relative_url }}), we played multiple episodes, accumulated rewards through out and averaged it. But there is a real uncertainity about the episodic length in real world. What if the episode is near infinite, we have to wait until the agent finishes MULTIPLE episode to update Q value which is not only slow but also has high space complexity.
+In [Monte Carlo]({{ "/_posts/montecarlo/" | relative_url }}), we played multiple episodes, accumulated rewards through out and averaged it. But there is a real uncertainity about the episodic length in real world. What if the episode is near infinite, we have to wait until the agent finishes MULTIPLE episode to update Q value which is not only slow but also has high space complexity.
 
 First we look into Online Monte Carlo, where rather than going through multiple episodes and updating, we update Q value after each episode.
 
@@ -34,7 +35,7 @@ $$
 
 We can see how the value of $Q_{k+1}$ depends on $Q_k$ which eliminates the need of storing rewards from $1 \cdots k-1$.
 
-**_PS_** Please follow this [blog post]({{ "/blog/montecarlo/" | relative_url }}) for full detailed implementation of generalized policy iteration (GPI) but here we will only be looking at the changes while the iterative process remains the same.
+**_PS_** Please follow this [blog post]({{ "/_posts/montecarlo/" | relative_url }}) for full detailed implementation of generalized policy iteration (GPI) but here we will only be looking at the changes while the iterative process remains the same.
 
 ```python
 def online_monte_carlo_estimation(policy, env, gamma, num_episodes):
@@ -61,7 +62,7 @@ def online_monte_carlo_estimation(policy, env, gamma, num_episodes):
 
 ### Temporal Difference Learning
 
-TD learning is a combination of [DP]({{ "/blog/vanillapolicyiteration/" | relative_url }}) and [Monte Carlo]({{ "/blog/montecarlo/" | relative_url }}).
+TD learning is a combination of [DP]({{ "/_posts/vanillaPolicyiteration/" | relative_url }}) and [Monte Carlo]({{ "/_posts/montecarlo/" | relative_url }}).
 In Monte Carlo, agent has to complete a full episode/s to make an update while in TD learning, agent only needs to wait until next time step to make an update as the update is based on the observed Reward and estimate $Q(s_{t+1})$
 
 $$

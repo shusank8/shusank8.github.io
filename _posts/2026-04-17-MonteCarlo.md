@@ -6,19 +6,21 @@ title: Monte Carlo Policy Iteration in CliffWalking
 
 layout: single
 date: 2026-04-17 18:02:14 -0400
+
+permalink: /_posts/montecarlo/
 # categories: je
 tags: RL
 show_date: true
 show_tags: true
 ---
 
-> Recommended to go through [Implementation of Bellman Equation]({{ "/blog/vanillapolicyiteration/" | relative_url }}) first, as some terms here (like stochastic environment) are assumed to be already known.
+> Recommended to go through [Implementation of Bellman Equation]({{ "/_posts/vanillapolicyiteration/" | relative_url }}) first, as some terms here (like stochastic environment) are assumed to be already known.
 
-We move from [Dynamic Programming]({{ "/blog/vanillapolicyiteration/" | relative_url }}) to Monte Carlo method. Unlike Bellman-based policy iteration, here we are not given the full MDP dynamics we use for updates. Instead, we learn by sampling trajectories from interaction with the environment.
+We move from [Dynamic Programming]({{ "/_posts/vanillapolicyiteration/" | relative_url }}) to Monte Carlo method. Unlike Bellman-based policy iteration, here we are not given the full MDP dynamics we use for updates. Instead, we learn by sampling trajectories from interaction with the environment.
 
 The environment used here is CliffWalking-v1 stochastic environment
 
-![CliffWalking board]({{ "/images/CliffWalking.png" | relative_url }})
+![CliffWalking board]({{ "assets/images/CliffWalking.png" | relative_url }})
 
 ---
 

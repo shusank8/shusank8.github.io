@@ -4,6 +4,7 @@ title: Bellman Equation using Policy Iteration
 # summary: A step-by-step implementation of the Bellman Equation using policy iteration on deterministic and stochastic FrozenLake environments.
 # tags: [RL]
 layout: single
+permalink: /_posts/vanillaPolicyiteration/
 date: 2026-04-15 18:02:14 -0400
 # categories: jekyll update
 tags: RL
@@ -42,7 +43,7 @@ In simple terms, Bellman updates say:
 
 We start by initializing the FrozenLake environment.
 
-![FrozenLake board]({{ "/images/frozenlake.png" | relative_url }})
+![FrozenLake board]({{ "assets/images/frozenlake.png" | relative_url }})
 
 In the FrozenLake 4x4 environment, the agent's goal is to reach the target and collect the reward, but it must navigate cautiously to avoid falling in the lake.
 

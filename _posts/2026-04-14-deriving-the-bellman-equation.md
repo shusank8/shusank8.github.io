@@ -5,6 +5,7 @@ title: Deriving the Bellman equation
 # tags: [RL]
 layout: single
 date: 2026-04-14 18:02:14 -0400
+permalink: /_posts/bellmanequation/
 categories: jekyll update
 tags: RL
 show_date: true
