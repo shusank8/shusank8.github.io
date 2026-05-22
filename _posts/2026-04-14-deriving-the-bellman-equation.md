@@ -1,8 +1,5 @@
 ---
 title: Deriving the Bellman equation
-# date: 2026-04-14
-# summary: A systematic derivation of the Bellman expectation equation from the definition of return, using marginalization, conditional probability, and the Markov property.
-# tags: [RL]
 layout: single
 date: 2026-04-14 18:02:14 -0400
 permalink: /_posts/bellmanequation/

@@ -1,8 +1,5 @@
 ---
 title: Markov Sequence Model
-# date: 2026-05-10
-# summary: Implementation of Markov Sequence Model using TABLES!!
-# tags: [NLP]
 layout: single
 date: 2026-05-10 18:02:14 -0400
 # categories: jekyll update

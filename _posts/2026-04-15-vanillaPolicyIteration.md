@@ -1,8 +1,5 @@
 ---
 title: Bellman Equation using Policy Iteration
-# date: 2026-04-15
-# summary: A step-by-step implementation of the Bellman Equation using policy iteration on deterministic and stochastic FrozenLake environments.
-# tags: [RL]
 layout: single
 permalink: /_posts/vanillaPolicyiteration/
 date: 2026-04-15 18:02:14 -0400

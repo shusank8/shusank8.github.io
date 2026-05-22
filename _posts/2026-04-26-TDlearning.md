@@ -1,9 +1,5 @@
 ---
 title: Online Monte Carlo and TD learning
-# date: 2026-04-26
-# summary: Making Monte Carlo Efficient and TD learning
-# tags: [RL]
-
 layout: single
 date: 2026-04-26 18:02:14 -0400
 # categories: jekyll update

@@ -1,12 +1,7 @@
 ---
 title: Monte Carlo Policy Iteration in CliffWalking
-# date: 2026-04-17
-# summary: Implementation of Monte Carlo policy iteration on the CliffWalking environment, including trajectory sampling, return estimation, policy improvement, and evaluation.
-# tags: [RL]
-
 layout: single
 date: 2026-04-17 18:02:14 -0400
-
 permalink: /_posts/montecarlo/
 # categories: je
 tags: RL

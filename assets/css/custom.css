@@ -1,7 +1,11 @@
-
-
 .layout--single {
   font-size: 18px;
 }
+
+a {
+  font-weight: normal !important;
+}
+
+
 
 @import "custom";
