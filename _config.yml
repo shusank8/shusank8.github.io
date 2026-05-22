@@ -67,6 +67,10 @@ author:
   avatar: "/assets/images/Shusanket.png"
   bio: "Trying to understanding"
   links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:notfound@.com"
+
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/shusank8"
