@@ -65,7 +65,7 @@ collections:
 author:
   name:
   avatar: "/assets/images/Shusanket.png"
-  bio: "Trying to understanding"
+  bio:
   links:
     - label: "Email"
       icon: "fas fa-envelope"
