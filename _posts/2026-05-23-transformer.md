@@ -284,7 +284,7 @@ For simplicity, we focus only on
 - the first attention head
 
 
-This gives matrices of shape (8, 4).
+This gives matrix of shape (8, 4).
 
 ###### Query Matrix (Q)
 
