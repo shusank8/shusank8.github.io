@@ -454,7 +454,7 @@ From the diagram above we can see Decoder contains 4 components:
 - Resnet and LayerNorm
 - FeedForward
 
-The target sequence is shifted to the right so that the model learns to predict the next token using only the previous tokens. A special start token (<SOS>) is added at the beginning of the target sequence before it is fed into the decoder. This ensures that, during training, the decoder receives past information only, while masked self-attention prevents it from accessing future tokens. As a result, the decoder learns autoregressive generation, producing the output one token at a time.
+The target sequence is shifted to the right so that the model learns to predict the next token using only the previous tokens. A special start token (SOS) is added at the beginning of the target sequence before it is fed into the decoder. This ensures that, during training, the decoder receives past information only, while masked self-attention prevents it from accessing future tokens. As a result, the decoder learns autoregressive generation, producing the output one token at a time.
 
 ###### Masked Multi Head Self Attention
 
