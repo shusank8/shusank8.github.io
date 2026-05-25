@@ -447,9 +447,14 @@ class LayerNorm(nn.Module):
 
 ### Decoder
 
-From the diagram above we can see Decoder contains components very similar to the encoder:
+From the diagram above we can see Decoder contains 4 components:
 
-However, there are two major differences.
+- Masked Multi Head Self Attention
+- Multi Head Cross Attention
+- Resnet and LayerNorm
+- FeedForward 
+
+The target sequence is shifted to the right so that the model learns to predict the next token using only the previous tokens. A special start token (<SOS>) is added at the beginning of the target sequence before it is fed into the decoder. This ensures that, during training, the decoder receives past information only, while masked self-attention prevents it from accessing future tokens. As a result, the decoder learns autoregressive generation, producing the output one token at a time.
 
 ###### Masked Multi Head Self Attention
 
@@ -483,7 +488,7 @@ After masked self-attention, the decoder performs cross attention.
 
 In cross attention:
 
-- Queries come from the target text/decoder
+- Queries come from the Decoder's self multi head attention 
 - Keys come from the encoder output
 - Values also come from the encoder output
 
@@ -494,7 +499,7 @@ For English → Nepali translation:
 - Encoder processes the English sentence
 - Decoder generates the Nepali sentence while attending to the encoder output
 
-Finally, the decoder output is passed through a Feed Forward Network (FFN), followed by a linear layer that projects the representations into the vocabulary space to predict the probability distribution of the next token.
+Finally, the decoder output is passed through a Feed-Forward Network (FFN), followed by a linear projection layer that maps the representations into the vocabulary space. A softmax layer then produces the probability distribution for predicting the next token.
 
 The Transformer architecture is built by stacking multiple Encoder and Decoder blocks together. Typically, this process is repeated N times, allowing the model to learn increasingly complex representations and relationships within the sequence.
 
