@@ -43,7 +43,7 @@ An Example of tgt text
 ```
 
 ```
-Corresponding src text encoding:
+Corresponding tgt text encoding:
 [ 2, 0, 668,  92, 4, 1,  1, 1]
 
 ```
@@ -228,7 +228,7 @@ Each head can attend to the entire sequence independently and can specialize in 
 
 We can think of heads as separate information-processing routes that allow the model to look at the same sequence from multiple perspectives simultaneously. After each head computes attention independently, their outputs are combined together so the model gets a richer representation of the input.
 
-One important thing to note is that self-attention is permutation invariant. This means the attention mechanism itself does not understand token order. If we shuffle the words in a sentence, the attention operation still behaves the same way. This is why positional embeddings are necessary
+One important thing to note is that attention is permutation invariant. This means the attention mechanism itself does not understand token order. If we shuffle the words in a sentence, the attention operation still behaves the same way. This is why positional embeddings are necessary
 
 Next we compute the attention
 
@@ -282,7 +282,7 @@ For simplicity, we focus only on
 
 - the first example in the batch
 - the first attention head
-- and squeeze the first two dim (1,1,8,4)=> (8,4)
+
 
 This gives matrices of shape (8, 4).
 
@@ -452,7 +452,7 @@ From the diagram above we can see Decoder contains 4 components:
 - Masked Multi Head Self Attention
 - Multi Head Cross Attention
 - Resnet and LayerNorm
-- FeedForward 
+- FeedForward
 
 The target sequence is shifted to the right so that the model learns to predict the next token using only the previous tokens. A special start token (<SOS>) is added at the beginning of the target sequence before it is fed into the decoder. This ensures that, during training, the decoder receives past information only, while masked self-attention prevents it from accessing future tokens. As a result, the decoder learns autoregressive generation, producing the output one token at a time.
 
@@ -488,7 +488,7 @@ After masked self-attention, the decoder performs cross attention.
 
 In cross attention:
 
-- Queries come from the Decoder's self multi head attention 
+- Queries come from the Decoder's self multi head attention
 - Keys come from the encoder output
 - Values also come from the encoder output
 
