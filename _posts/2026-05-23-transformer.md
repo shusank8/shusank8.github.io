@@ -219,10 +219,10 @@ We introduce heads to the Q, K, and V vectors so the model can learn multiple ty
 So instead of having a single attention operation, we split the embeddings into multiple heads. The tensor shape becomes (2,3,8,4)
 where:
 
-- 2 → batch size
-- 3 → number of attention heads
-- 8 → sequence length
-- 4 → embedding dimension handled by each head
+- batch size = 2
+- number of attention heads = 3
+- sequence length = 8
+- embedding dimension handled by each head = 4
 
 Each head can attend to the entire sequence independently and can specialize in capturing different kinds of information. For example, one head might focus on syntactic relationships, while another captures long range dependencies or semantic meaning.
 
@@ -397,8 +397,8 @@ The attention layer is mainly responsible for communication between tokens. Once
 
 We can think of it like this:
 
-- Attention → tokens communicate with each other
-- Feed Forward → each token processes the gathered information independently
+- Attention : tokens communicate with each other
+- Feed Forward : each token processes the gathered information independently
 
 The Feed Forward layer expands the embedding dimension, applies a non-linearity, and then projects it back to the original embedding size.
 
@@ -494,7 +494,7 @@ In cross attention:
 
 This allows the decoder to look at the source sentence while generating the target sentence.
 
-For English → Nepali translation:
+For English to Nepali translation:
 
 - Encoder processes the English sentence
 - Decoder generates the Nepali sentence while attending to the encoder output
