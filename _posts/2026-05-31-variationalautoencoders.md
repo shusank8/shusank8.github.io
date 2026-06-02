@@ -4,7 +4,7 @@ layout: single
 date: 2026-05-31 18:02:14 -0400
 permalink: /_posts/bellmanequation/
 categories: jekyll update
-tags: RL
+tags: CV
 show_date: true
 show_tags: true
 ---
