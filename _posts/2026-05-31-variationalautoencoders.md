@@ -294,7 +294,7 @@ $$
 
 ---
 
-###### Compute $ \mathbb E*q[\log p*\theta(z)] $
+###### Compute $ \mathbb E_q[\log p_\theta(z)] $
 
 For the standard normal prior,
 
