@@ -2,7 +2,7 @@
 title: Variational Auto Encoders
 layout: single
 date: 2026-05-31 18:02:14 -0400
-permalink: /_posts/bellmanequation/
+permalink: /_posts/vae/
 categories: jekyll update
 tags: CV
 show_date: true
@@ -294,7 +294,7 @@ $$
 
 ---
 
-###### Compute $ \mathbb E_q[\log p_\theta(z)] $
+###### Compute $ \mathbb E*q[\log p*\theta(z)] $
 
 For the standard normal prior,
 
@@ -454,5 +454,3 @@ z.backward()
 >param_logvar.grad = -0.3634 and param_mu.grad = -0.9655
 
 ```
-
-

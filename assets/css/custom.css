@@ -6,6 +6,12 @@ a {
   font-weight: normal !important;
 }
 
+.todo-note {
+  margin-left: 2rem;
+}
 
+.todo-note summary {
+  cursor: pointer;
+}
 
 @import "custom";
