@@ -493,7 +493,7 @@ In other words, the model should care about the distance between tokens, not the
 
 ---
 
-### A Different Idea: Rotate Instead of Add
+###### A Different Idea: Rotate Instead of Add
 
 Absolute positional embeddings inject position by **adding** a vector:
 
@@ -515,7 +515,7 @@ The attention score can then depend on the difference between those rotations.
 
 ---
 
-### Why Rotation?
+###### Why Rotation?
 
 Suppose we have a 2D vector
 
@@ -563,7 +563,7 @@ This immediately hints at relative position.
 
 ---
 
-### Why Use Complex Numbers?
+###### Why Use Complex Numbers?
 
 We could rotate vectors using rotation matrices directly.
 
@@ -598,7 +598,7 @@ This makes the mathematics cleaner and the implementation more efficient.
 
 ---
 
-### Encoding Position Through Rotation
+###### Encoding Position Through Rotation
 
 Consider a query vector $q$ and a key vector $k$.
 
@@ -632,7 +632,7 @@ Every position therefore corresponds to a unique rotation.
 
 ---
 
-### Where Relative Position Appears
+###### Where Relative Position Appears
 
 Attention computes an inner product between queries and keys.
 
@@ -746,7 +746,7 @@ The attention score therefore depends naturally on relative distance.
 
 This elegant property is the reason RoPE has become the positional encoding method used in most modern large language models.
 
-<details>
+<details markdown='1'>
 <summary>Minimal RoPE </summary>
 
 ```python
