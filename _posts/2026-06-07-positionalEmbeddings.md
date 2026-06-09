@@ -466,7 +466,8 @@ class PositionalEmbeddings(nn.Module):
 ```
 
 </details>
-## Rotary Positional Embeddings (RoPE)
+
+##### Rotary Positional Embeddings (RoPE)
 
 We saw that Absolute Positional Embeddings assign every token a position-specific vector and add it directly to the token embedding.
 
