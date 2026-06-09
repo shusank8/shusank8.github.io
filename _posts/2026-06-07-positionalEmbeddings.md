@@ -745,3 +745,40 @@ $$
 The attention score therefore depends naturally on relative distance.
 
 This elegant property is the reason RoPE has become the positional encoding method used in most modern large language models.
+
+<details>
+<summary>Minimal RoPE </summary>
+
+```python
+B = 32
+N_h = 8
+head_dim = 256
+th = 10000
+seq_len = 512
+
+x = torch.randn(B, seq_len, N_h, head_dim)
+
+# shape => (Head_Dim/2)
+theta_numerator = torch.arange(0, head_dim, 2).float()
+
+# shape => (Head_Dim/2)
+theta = 1.0 / (th ** (theta_numerator / head_dim))
+
+# shape => (seqlen)
+m = torch.arange(0, seq_len)
+
+# shape => (seqlen, head_dim/2)
+freq = torch.outer(m, theta).float()
+
+# computing complex number
+freq_complex = torch.polar(torch.ones_like(freq), freq)
+
+
+x = torch.view_as_complex(x.float().reshape(*x.shape[:-1], -1, 2))
+freq_complex = freq_complex.unsqueeze(0).unsqueeze(2)
+x_rotated = x * freq_complex
+x = torch.view_as_real(x).view(B, seq_len, N_h, -1)
+
+```
+
+</details>
