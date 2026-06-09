@@ -99,6 +99,8 @@ Since the Transformer processes all tokens in parallel, it has no inherent under
 
 In the original Transformer paper, the authors used sinusoidal positional embeddings, where the positional values are generated using sine and cosine functions. However, instead of using fixed sinusoidal values, we can make the positional embeddings learnable parameters. During training, the model learns these position representations on its own, and in practice, they often converge to patterns similar to sinusoidal embeddings.
 
+> I skipped the details of sinusoidal positional embeddings in this blog post, but [this blog post]({{ "/_posts/positionalEmbeddings/" | relative_url }}) explains them thoroughly.
+
 From our Input Embeddings we have data shape of (2, 8, 12) then our positional embeddings will also have a shape of (8, 12)
 
 Since the same positional information is shared across all examples in the batch, the positional embeddings are broadcast across the batch dimension and added to the input embeddings:
@@ -282,7 +284,6 @@ For simplicity, we focus only on
 
 - the first example in the batch
 - the first attention head
-
 
 This gives matrix of shape (8, 4).
 

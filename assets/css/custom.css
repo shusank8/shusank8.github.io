@@ -6,12 +6,106 @@ a {
   font-weight: normal !important;
 }
 
-.todo-note {
-  margin-left: 2rem;
+/* =========================
+   Day Container
+   ========================= */
+
+.todobox {
+  margin: 0rem 3rem;
+  border: none;
+  background: transparent;
+  /* background-color: red; */
+  border-radius: 0;
 }
 
-.todo-note summary {
+.todobox > summary {
+  list-style: none;
   cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  color: #424040;
+}
+
+.todoitem > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoitem > summary.has-note::after {
+  content: "📝";
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.todoitem.completed > summary {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* =========================
+   Todo Items
+   ========================= */
+
+.todoitem {
+  margin: 0.35rem 0;
+  border: none;
+  background: transparent;
+  padding-left: 3rem;
+  width: max-content;
+  /* background-color: red; */
+}
+
+.todoitem > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #3d3a3a;
+  padding: 0.35rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* =========================
+   Todo Notes
+   ========================= */
+
+.todonote {
+  margin-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+
+  padding: 0.5rem 0.75rem;
+
+  border-left: 3px solid #e5e5e5;
+
+  color: #7a7a7a;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+/* =========================
+   Checkbox Styling
+   ========================= */
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 768px) {
+  .todobox {
+    margin: 1rem;
+  }
+
+  .todonote {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+  }
 }
 
 @import "custom";
