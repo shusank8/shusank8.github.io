@@ -516,63 +516,13 @@ The attention score can then depend on the difference between those rotations.
 
 ---
 
-###### Why Rotation?
-
-Suppose we have a 2D vector
-
-$$
-v=
-\begin{bmatrix}
-x\
-y
-\end{bmatrix}.
-$$
-
-If we rotate it by an angle $$theta$$, we obtain
-
-$$
-R(\theta)v
-=
-
-\begin{bmatrix}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{bmatrix}
-\begin{bmatrix}
-x\
-y
-\end{bmatrix}.
-$$
-
-Now imagine two identical vectors.
-
-If one is rotated by $$30^\circ$$ and the other by $$60^\circ$$, their relationship depends only on the angle difference
-
-$$
-60^\circ-30^\circ = 30^\circ.
-$$
-
-This is exactly the behavior we want for positional information.
-
-If position $m$ rotates a vector by $m\theta$ and position $n$ rotates another vector by $n\theta$, then their interaction should naturally depend on
-
-$$
-m\theta-n\theta.
-$$
-
-This immediately hints at relative position.
-
----
-
 ###### Why Use Complex Numbers?
 
-We could rotate vectors using rotation matrices directly.
+We could apply positional rotations using an explicit rotation matrix. However, RoPE does not perform a single rotation over the entire $D$ dimensional embedding space. Instead, it rotates each **pair of dimensions independently**, effectively treating every two dimensions as a separate 2D subspace.
 
-However, Transformers perform these operations billions of times.
+Representing this operation as a full $D$ $\times$ $D$ rotation matrix would produce a large block-diagonal matrix which will be highly sparse and storing or multiplying by it explicitly would be computationally inefficient.
 
-Using explicit rotation matrices would be expensive.
-
-Complex numbers provide a much more elegant representation.
+To avoid this overhead, RoPE groups every pair of dimensions into a complex number and performs the rotation through complex multiplication.
 
 Recall Euler's formula:
 
@@ -627,10 +577,6 @@ $$
 k_n = k,e^{in\theta}
 $$
 
-Notice that the rotation angle grows linearly with position.
-
-Every position therefore corresponds to a unique rotation.
-
 ---
 
 ###### Where Relative Position Appears
@@ -678,53 +624,11 @@ qk^*
 e^{i(m-n)\theta}
 $$
 
-This is the key result.
-
-The positional term depends only on
+where
 
 $$
-m-n
+\theta_i = \frac{1}{10000^{\frac{2i}{D}}}.
 $$
-
-The absolute positions $m$ and $n$ have disappeared.
-
-Only their relative distance remains.
-
-This is precisely the behavior we wanted.
-
-###### Extending to High Dimensions
-
-A Transformer does not work with a single complex number.
-
-Instead, RoPE groups every pair of dimensions into a complex value.
-
-For example,
-
-$$
-[x_0,x_1,x_2,x_3]
-$$
-
-is interpreted as
-
-$$
-(x_0+ix_1,;
-x_2+ix_3).
-$$
-
-Each pair receives its own rotation frequency.
-
-Just like ABE , RoPE uses frequencies of the form:
-
-$$
-\frac{1}
-{10000^{\frac{2i}{D}}}.
-$$
-
-- Lower dimensions rotate more rapidly.
-
-- Higher dimensions rotate more slowly.
-
-As a result, some dimensions capture local positional relationships while others capture long-range relationships.
 
 ###### The Main Idea
 
