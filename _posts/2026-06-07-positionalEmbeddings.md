@@ -606,13 +606,13 @@ Consider a query vector $q$ and a key vector $k$.
 For a token at position $m$, RoPE rotates the query by
 
 $$
-e^{im\theta}.
+e^{im\theta}
 $$
 
 Similarly, a token at position $n$ rotates the key by
 
 $$
-e^{in\theta}.
+e^{in\theta}
 $$
 
 The rotated vectors become
@@ -624,7 +624,7 @@ $$
 and
 
 $$
-k_n = k,e^{in\theta}.
+k_n = k,e^{in\theta}
 $$
 
 Notice that the rotation angle grows linearly with position.
