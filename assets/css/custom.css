@@ -1,9 +1,36 @@
 .layout--single {
   font-size: 18px;
+  font-weight: 350;
 }
 
 a {
-  font-weight: normal !important;
+  font-weight: 350 !important;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.archive__item-excerpt {
+  display: none !important;
+}
+.archive__subtitle {
+  display: none !important;
+  /* background-color: yellow; */
+}
+
+.archive {
+  /* background-color: red; */
+  padding-top: 0 !important;
+  margin-top: 0;
+}
+
+.u-url {
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: rgb(66, 123, 176) !important;
+}
+
+.u-url:hover {
+  color: rgb(1, 62, 118) !important;
 }
 
 /* =========================
