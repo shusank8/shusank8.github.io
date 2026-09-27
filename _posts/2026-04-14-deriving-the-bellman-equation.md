@@ -143,7 +143,7 @@ P(g, a, s', r \mid s) = P(g \mid s', r, a, s)\, P(r, s', a \mid s)
 $$
 
 At this stage, we invoke the **Markov property**, which asserts that future returns depend
-only on the current state:
+only on the next state:
 
 $$
 P(g \mid s', r, a, s) = P(g \mid s')
