@@ -340,12 +340,3 @@ The key flow is:
 Unlike dynamic programming methods, Monte Carlo methods learn from experience rather than directly from transition equations.
 
 ---
-
-### Summary
-
-- We used the CliffWalking stochastic environment, where the goal is to reach the destination without falling into the cliff
-- We sampled full trajectories using epsilon-greedy exploration
-- We computed first-visit Monte Carlo returns
-- We estimated `Q(s, a)` by averaging returns
-- We improved the policy using greedy action selection
-- We evaluated the learned policy over many games

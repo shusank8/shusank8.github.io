@@ -402,12 +402,3 @@ That is the core of **policy iteration**.
 
 ---
 
-### Summary
-
-- We started with a random policy
-- We evaluated that policy using Bellman updates
-- We improved the policy by choosing better actions
-- We repeated the process until the policy converged
-- Then we extended the same logic from deterministic to stochastic transitions
-
-This is one of the most important dynamic programming methods in reinforcement learning because it shows how optimal behavior can be computed when the environment model is known.
