@@ -72,9 +72,9 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:notfound@.com"
 
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/shusank8"
+    # - label: "GitHub"
+    #   icon: "fab fa-github"
+    #   url: "https://github.com/shusank8"
 
 custom_css:
   - /assets/css/custom.css

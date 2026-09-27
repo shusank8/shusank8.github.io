@@ -1,7 +1,7 @@
 ---
 title: Transformer
 layout: single
-date: 2026-05-23 18:02:14 -0400
+date: 2026-09-08 18:02:14 -0400
 permalink: /_posts/transformer/
 categories: jekyll update
 tags: NLP

@@ -1,7 +1,7 @@
 ---
 title: Monte Carlo Policy Iteration in CliffWalking
 layout: single
-date: 2026-04-17 18:02:14 -0400
+date: 2026-08-02 18:02:14 -0400
 permalink: /_posts/montecarlo/
 # categories: je
 tags: RL

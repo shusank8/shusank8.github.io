@@ -1,7 +1,7 @@
 ---
 title: From Absolute PE to RoPE
 layout: single
-date: 2026-06-07 18:02:14 -0400
+date: 2026-09-26 18:02:14 -0400
 permalink: /_posts/positionalEmbeddings/
 categories: jekyll update
 tags: NLP CV

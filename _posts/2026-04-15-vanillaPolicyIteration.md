@@ -2,7 +2,7 @@
 title: Bellman Equation using Policy Iteration
 layout: single
 permalink: /_posts/vanillaPolicyiteration/
-date: 2026-04-15 18:02:14 -0400
+date: 2026-07-28 18:02:14 -0400
 # categories: jekyll update
 tags: RL
 show_date: true

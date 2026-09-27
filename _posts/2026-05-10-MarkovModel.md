@@ -1,7 +1,7 @@
 ---
 title: Markov Sequence Model
 layout: single
-date: 2026-05-10 18:02:14 -0400
+date: 2026-08-16 18:02:14 -0400
 # categories: jekyll update
 tags: NLP
 show_date: true

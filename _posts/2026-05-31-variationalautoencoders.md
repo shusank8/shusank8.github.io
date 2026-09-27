@@ -1,7 +1,7 @@
 ---
 title: Variational Auto Encoders
 layout: single
-date: 2026-05-31 18:02:14 -0400
+date: 2026-09-17 18:02:14 -0400
 permalink: /_posts/vae/
 categories: jekyll update
 tags: CV

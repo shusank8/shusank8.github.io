@@ -1,7 +1,7 @@
 ---
 title: Online Monte Carlo and TD learning
 layout: single
-date: 2026-04-26 18:02:14 -0400
+date: 2026-08-08 18:02:14 -0400
 # categories: jekyll update
 tags: RL
 permalink: /_posts/tdlearning/

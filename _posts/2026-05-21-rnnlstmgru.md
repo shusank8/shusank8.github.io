@@ -1,7 +1,7 @@
 ---
 layout: single
 title: RNN, LSTM and the need for Attention
-date: 2026-05-20 18:02:14 -0400
+date: 2026-08-27 18:02:14 -0400
 # categories: jekyll update
 tags: NLP
 show_date: true
